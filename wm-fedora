@@ -38,7 +38,7 @@ cp -R bspwmbydarch/home/.[^.]* $HOME/
 cd bspwmbydarch/compilar/st 
 sudo make clean install 
 cd 
-sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin. zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar 
+sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar 
 sudo dnf install -y slim  
 sudo systemctl set-default graphical.target
 
