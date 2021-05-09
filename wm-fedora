@@ -1,12 +1,11 @@
 #!/bin/sh
 
-
-echo " ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗ ██╗   ██╗██████╗  █████╗ ██████╗  ██████╗██╗  ██╗        ";
-echo " ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║		     ";
-echo " ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝ ╚████╔╝ ██║  ██║███████║██████╔╝██║     ███████║	       ";
-echo " ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗  ╚██╔╝  ██║  ██║██╔══██║██╔══██╗██║     ██╔══██║	       ";
-echo " ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██████╔╝   ██║   ██████╔╝██║  ██║██║  ██║╚██████╗██║  ██║	       ";
-echo " ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═════╝    ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝        ";
+echo " ___.                               ___.             .___                    .__          _____          .___                   ;"
+echo " \_ |__   ______________  _  _______\_ |__ ___.__. __| _/____ _______   ____ |  |__     _/ ____\____   __| _/________________   ;"
+echo "  | __ \ /  ___/\____ \ \/ \/ /     \| __ <   |  |/ __ |\__  \\_  __ \_/ ___\|  |  \    \   __\/ __ \ / __ |/  _ \_  __ \__  \  ;"
+echo "  | \_\ \\___ \ |  |_> >     /  Y Y  \ \_\ \___  / /_/ | / __ \|  | \/\  \___|   Y  \    |  | \  ___// /_/ (  <_> )  | \// __ \_ ;"
+echo "  |___  /____  >|   __/ \/\_/|__|_|  /___  / ____\____ |(____  /__|    \___  >___|  /____|__|  \___  >____ |\____/|__|  (____  / ;"
+echo "      \/     \/ |__|               \/    \/\/         \/     \/            \/     \/_____/         \/     \/                 \/ ;" 
                                                                                                       
 sleep 3
 
@@ -39,10 +38,11 @@ cp -R bspwmbydarch/home/.[^.]* $HOME/
 cd bspwmbydarch/compilar/st 
 sudo make clean install 
 cd 
-sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin. zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock lxappearance transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar 
+sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin. zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-sudo dnf install lightdm lightdm-gtkasdasdasdsadadasascadqerqrafadgvafas
+sudo dnf install -y slim  
+sudo systemctl set-default graphical.target
 
 clear
 
@@ -54,7 +54,7 @@ sleep 5
 uname -r 
 sleep 3
 
-echo "BspwmbyDarch instalado"
+echo "BspwmbyDarch_fedora instalado"
 sleep 5
 clear
 reboot
