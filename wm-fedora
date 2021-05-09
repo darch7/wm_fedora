@@ -27,7 +27,8 @@ cat /etc/dnf/dnf.conf
 sleep 2
 cd 
 clear
-sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs @base-x && xdg-user-dirs-update
+sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs @base-x 
+sudo xdg-user-dirs-update
 sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management"
 git clone https://github.com/darch7/bspwmbydarch_fedora
 cp -R bspwmbydarch/config/* $HOME/.config/ 
