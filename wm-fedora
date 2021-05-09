@@ -60,4 +60,4 @@ sleep 3
 echo "BspwmbyDarch_fedora instalado"
 sleep 5
 clear
-reboot
+sudo systemctl reboot
