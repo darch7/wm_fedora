@@ -1,0 +1,60 @@
+#!/bin/sh
+
+
+echo " ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗ ██╗   ██╗██████╗  █████╗ ██████╗  ██████╗██╗  ██╗        ";
+echo " ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║		     ";
+echo " ██████╔╝███████╗██████╔╝██║ █╗ ██║██╔████╔██║██████╔╝ ╚████╔╝ ██║  ██║███████║██████╔╝██║     ███████║	       ";
+echo " ██╔══██╗╚════██║██╔═══╝ ██║███╗██║██║╚██╔╝██║██╔══██╗  ╚██╔╝  ██║  ██║██╔══██║██╔══██╗██║     ██╔══██║	       ";
+echo " ██████╔╝███████║██║     ╚███╔███╔╝██║ ╚═╝ ██║██████╔╝   ██║   ██████╔╝██║  ██║██║  ██║╚██████╗██║  ██║	       ";
+echo " ╚═════╝ ╚══════╝╚═╝      ╚══╝╚══╝ ╚═╝     ╚═╝╚═════╝    ╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝        ";
+                                                                                                      
+sleep 3
+
+sudo -v
+while true; do
+  sudo -nv; sleep 1m
+  kill -0 $$ 2>/dev/null || exit
+done &
+
+#Instalar bspwmbydarch_fedora
+cd 
+sudo dnf install -y fedora-workstation-repositories && sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
+sudo dnf update 
+sudo dnf repolist --all
+clear
+sudo echo "fastestmirror=true" >> /etc/dnf/dnf.conf
+sudo echo "deltarpm=true" >> /etc/dnf/dnf.conf
+cat /etc/dnf/dnf.conf
+sleep 2
+cd 
+clear
+sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs @base-x && xdg-user-dirs-update
+sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management"
+git clone https://github.com/darch7/bspwmbydarch_fedora
+cp -R bspwmbydarch/config/* $HOME/.config/ 
+cp -R bspwmbydarch/.local $HOME/
+mv .local/fonts ~/.local/share/ 
+sudo chmod +x .local/bin/scripts
+cp -R bspwmbydarch/home/.[^.]* $HOME/ 
+cd bspwmbydarch/compilar/st 
+sudo make clean install 
+cd 
+sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin. zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock lxappearance transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar 
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+sudo dnf install lightdm lightdm-gtkasdasdasdsadadasascadqerqrafadgvafas
+
+clear
+
+chsh -s $(which zsh)
+clear
+
+neofetch
+sleep 5
+uname -r 
+sleep 3
+
+echo "BspwmbyDarch instalado"
+sleep 5
+clear
+reboot
