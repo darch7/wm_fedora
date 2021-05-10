@@ -51,7 +51,6 @@ sudo echo "exec bspwm" >> ~/.xinitrc
 cat .xinitrc
 sleep 2
 
-chsh -s $(which zsh)
 
 clear
 
