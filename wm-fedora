@@ -18,64 +18,64 @@ done &
 
 #Instalar bspwmbydarch_fedora
 
-cd \
-sudo dnf install -y fedora-workstation-repositories && sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm \
-sudo dnf repolist --all \
+cd 
+sudo dnf install -y fedora-workstation-repositories && sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm 
+sudo dnf repolist --all 
 sleep 4
 clear
 # Dnf rapido
-sudo echo "fastestmirror=true" >> /etc/dnf/dnf.conf \
-sudo echo "deltarpm=true" >> /etc/dnf/dnf.conf \
-cat /etc/dnf/dnf.conf \
+sudo echo "fastestmirror=true" >> /etc/dnf/dnf.conf 
+sudo echo "deltarpm=true" >> /etc/dnf/dnf.conf 
+cat /etc/dnf/dnf.conf 
 sleep 3
 
 # actualizar mirrors
-sudo dnf update -y \
-cd \
+sudo dnf update -y 
+cd 
 clear
 # instalacion bspwm y librerias de xorg
-sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs xkbcomp-devel @base-x \
+sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs xkbcomp-devel @base-x 
 
 # crear carpetas de usuario
-xdg-user-dirs-update \
+xdg-user-dirs-update 
 
 # instalación de grupos de fedora
-sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management" \
+sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management" 
 
 # clonacion de repos y copiado de carpeta a su respectivos lugares 
-git clone https://github.com/darch7/bspwmbydarch_fedora \
-cp -R bspwmbydarch_fedora/config/* $HOME/.config/ \
-cp -R bspwmbydarch_fedora/.local $HOME/ \
-mv .local/fonts ~/.local/share/  \
-sudo chmod +x .local/bin/scripts .\
-cp -R bspwmbydarch_fedora/home/.[^.]* $HOME/  \
-cd bspwmbydarch_fedora/compilar/st  \
-sudo make clean install  \
-cd  \
+git clone https://github.com/darch7/bspwmbydarch_fedora 
+cp -R bspwmbydarch_fedora/config/* $HOME/.config/ 
+cp -R bspwmbydarch_fedora/.local $HOME/ 
+mv .local/fonts ~/.local/share/  
+sudo chmod +x .local/bin/scripts 
+cp -R bspwmbydarch_fedora/home/.[^.]* $HOME/  
+cd bspwmbydarch_fedora/compilar/st  
+sudo make clean install  
+cd  
 
 # instalacion de dependencias 
-sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar  \ 
+sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar   
 
 # instalacion de dm
-#sudo dnf install -y slim  \
-#sudo systemctl enable slim  \
-#sudo systemctl set-default graphical.target \
+#sudo dnf install -y slim  
+#sudo systemctl enable slim  
+#sudo systemctl set-default graphical.target 
 
 clear
 
 # creacion de .xinitrc
-touch .xinitrc \
-sudo echo "exec bspwm" >> ~/.xinitrc \
-cat .xinitrc \ 
+touch .xinitrc 
+sudo echo "exec bspwm" >> ~/.xinitrc 
+cat .xinitrc 
 sleep 2 
 
 
 clear
 
 # comprobación y final
-neofetch  \
+neofetch  
 sleep 5
-uname -r  \
+uname -r  
 sleep 3
 
 echo "BspwmbyDarch_fedora instalado"  
