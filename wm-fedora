@@ -25,8 +25,9 @@ sleep 4
 clear
 
 # Dnf rapido
-echo "fastestmirror=true" | sudo tee --append /etc/dnf/dnf.conf 
+echo "fastestmirror=true" | sudo tee --append /etc/dnf/dnf.conf ;
 echo "deltarpm=true" | sudo tee --apend /etc/dnf/dnf.conf
+clear
 
 cat /etc/dnf/dnf.conf
  
@@ -49,20 +50,20 @@ sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts
 git clone https://github.com/darch7/bspwmbydarch_fedora 
 cp -R bspwmbydarch_fedora/config/* $HOME/.config/ 
 cp -R bspwmbydarch_fedora/.local $HOME/ 
-mv .local/fonts ~/.local/share/  
-sudo chmod +x .local/bin/scripts 
+mv .local/fonts $HOME/.local/share  
+sudo chmod +x .local/bin 
 cp -R bspwmbydarch_fedora/home/.[^.]* $HOME/  
 cd bspwmbydarch_fedora/compilar/st  
 sudo make clean install  
 cd  
 
 # instalacion de dependencias 
-sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen thunar thunar-archive-plugin thunar-volman thunar-media-tags-plugin zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch libva-intel-driver slock transmission sxiv dunst zathura-pdf-poppler zathura intel-media-driver papirus-icon-theme polybar   
+sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson rofi nitrogen pcmanfm zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch slock transmission sxiv dunst zathura-pdf-poppler zathura papirus-icon-theme polybar   
 
 # instalacion de dm
-#sudo dnf install -y slim  
-#sudo systemctl enable slim  
-#sudo systemctl set-default graphical.target 
+sudo dnf install -y slim  
+sudo systemctl enable slim  
+sudo systemctl set-default graphical.target 
 
 clear
 
