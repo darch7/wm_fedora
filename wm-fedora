@@ -23,10 +23,13 @@ sudo dnf install -y fedora-workstation-repositories && sudo dnf install -y https
 sudo dnf repolist --all 
 sleep 4
 clear
+
 # Dnf rapido
-sudo echo "fastestmirror=true" >> /etc/dnf/dnf.conf 
-sudo echo "deltarpm=true" >> /etc/dnf/dnf.conf 
-cat /etc/dnf/dnf.conf 
+echo "fastestmirror=true" >> /etc/dnf/dnf.conf 
+echo "deltarpm=true" >> /etc/dnf/dnf.conf 
+
+cat /etc/dnf/dnf.conf
+ 
 sleep 3
 
 # actualizar mirrors
@@ -64,9 +67,10 @@ sudo dnf install -y materia-gtk-theme papirus-icon-theme xsetroot cmake meson ro
 clear
 
 # creacion de .xinitrc
-touch .xinitrc 
-sudo echo "exec bspwm" >> ~/.xinitrc 
-cat .xinitrc 
+cat > ~/.xinitrc <<EOF
+exec bspwm
+EOF
+ 
 sleep 2 
 
 
