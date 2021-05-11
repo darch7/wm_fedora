@@ -25,8 +25,8 @@ sleep 4
 clear
 
 # Dnf rapido
-echo "fastestmirror=true" >> /etc/dnf/dnf.conf 
-echo "deltarpm=true" >> /etc/dnf/dnf.conf 
+echo "fastestmirror=true" | sudo tee --append /etc/dnf/dnf.conf 
+echo "deltarpm=true" | sudo tee --apend /etc/dnf/dnf.conf
 
 cat /etc/dnf/dnf.conf
  
@@ -40,7 +40,7 @@ clear
 sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs xkbcomp-devel @base-x 
 
 # crear carpetas de usuario
-xdg-user-dirs-update 
+xdg-user-dirs-update --force
 
 # instalación de grupos de fedora
 sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management" 
