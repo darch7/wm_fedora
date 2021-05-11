@@ -1,3 +1,3 @@
 # wm_fedora
 
-ejecutar script : ./wm-fedora
+ejecutar script : sudo ./wm-fedora
