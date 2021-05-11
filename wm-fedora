@@ -26,7 +26,7 @@ clear
 
 # Dnf rapido
 echo "fastestmirror=true" | sudo tee --append /etc/dnf/dnf.conf ;
-echo "deltarpm=true" | sudo tee --apend /etc/dnf/dnf.conf
+echo "deltarpm=true" | sudo tee --append /etc/dnf/dnf.conf
 clear
 
 cat /etc/dnf/dnf.conf
