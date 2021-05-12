@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo " ██████╗ ███████╗██████╗ ██╗    ██╗███╗   ███╗██████╗ ██╗   ██╗██████╗  █████╗ ██████╗  ██████╗██╗  ██╗        ███████╗███████╗██████╗  ██████╗ ██████╗  █████╗  ;"
 echo " ██╔══██╗██╔════╝██╔══██╗██║    ██║████╗ ████║██╔══██╗╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██║  ██║        ██╔════╝██╔════╝██╔══██╗██╔═══██╗██╔══██╗██╔══██╗  ;"
@@ -38,7 +38,8 @@ sudo dnf update -y
 cd 
 clear
 # instalacion bspwm y librerias de xorg
-sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xdg-user-dirs xkbcomp-devel @base-x 
+sudo dnf install -y bspwm sxhkd make gcc libXinerama-devel libXft libXft-devel harfbuzz-devel xkbcomp-devel @base-x 
+sudo dnf install -y xdg-user-dirs
 
 # crear carpetas de usuario
 xdg-user-dirs-update --force
@@ -64,20 +65,17 @@ zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip
 xdotool mpv firefox dnf-utils ranger neovim neofetch slock transmission sxiv
 dunst zathura-pdf-poppler zathura papirus-icon-theme calcurse polybar   
 
+# creacion de .xinitrc
+touch .xinitrc
+echo "exec bspwm" > ~/.xinitrc
+sleep 2 
+
+clear
+
 # instalacion de dm
 sudo dnf install -y slim  
 sudo systemctl enable slim  
 sudo systemctl set-default graphical.target 
-
-clear
-
-# creacion de .xinitrc
-cat > ~/.xinitrc <<EOF
-exec bspwm
-EOF
- 
-sleep 2 
-
 
 clear
 
