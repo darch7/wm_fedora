@@ -59,7 +59,7 @@ sudo make clean install
 cd  
 
 # instalacion de dependencias 
-sudo dnf install -y xkbcomp materia-gtk-theme papirus-icon-theme blueberry xsetroot cmake meson rofi nitrogen pcmanfm zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch slock transmission sxiv dunst zathura-pdf-poppler zathura papirus-icon-theme calcurse neofetch polybar   
+sudo dnf install -y xrdb xkbcomp materia-gtk-theme papirus-icon-theme blueberry xsetroot cmake meson rofi nitrogen pcmanfm zsh zsh-autosuggestions zsh-syntax-highlighting zathura-zsh-completion tmux htop telegram-desktop xarchiver ffmpeg maim xclip xdotool mpv firefox dnf-utils ranger neovim neofetch slock transmission sxiv dunst zathura-pdf-poppler zathura papirus-icon-theme calcurse neofetch polybar   
 
 # creacion de .xinitrc
 touch .xinitrc
