@@ -51,7 +51,7 @@ sudo dnf groupinstall -y "Development Tools" "Multimedia" "Input Methods" "Fonts
 git clone https://github.com/darch7/bspwmbydarch_fedora 
 cp -R bspwmbydarch_fedora/config/* $HOME/.config/ 
 cp -R bspwmbydarch_fedora/.local $HOME/ 
-mv .local/fonts $HOME/.local/share  
+mv -R .local/fonts $HOME/.local/share/fonts  
 sudo chmod +x .local/bin 
 cp -R bspwmbydarch_fedora/home/.[^.]* $HOME/  
 cd bspwmbydarch_fedora/compilar/st  
