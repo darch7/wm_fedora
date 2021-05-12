@@ -21,7 +21,7 @@ ejecutar script : ./wm-fedora
 3- { herramientas de devel , fonts , librerias de C , C++ y podman }
 
 
-4- { tema materia dark, papirus icons, rofi, zathura, st , pcmanfm , sxiv , picom , transmission, polybar , ranger, neovim, zsh, calcurse (agenda cli),tmux, htop, nitrogen (gestion de fondo de pantalla, slock (bloqueo de pantalla) , firefox browser, telegram y blueberry (para bluetooth) }
+4- { tema materia dark, papirus icons, rofi, zathura, st , pcmanfm , sxiv , picom , transmission, polybar , ranger, neovim, zsh, calcurse (agenda cli),tmux, htop, nitrogen (gestion de fondo de pantalla), slock (bloqueo de pantalla) , firefox (browser), telegram y blueberry (para bluetooth) }
 
 5 - { como DM slim }
 
