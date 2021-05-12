@@ -7,7 +7,7 @@ Bspwm by darch7 (ColorFull viene por defecto) hay 3 temas dracula y black editio
 --------------------------------------------------------------------------------------------
 
 
-ejecutar script : sudo ./wm-fedora
+ejecutar script : ./wm-fedora
 
 
 **QUE TRAE EL SCRIPT...**
