@@ -64,7 +64,7 @@ sudo dnf install -y xkbcomp materia-gtk-theme papirus-icon-theme blueberry xsetr
 # creacion de .xinitrc
 touch .xinitrc
 echo "exec bspwm" > ~/.xinitrc
-sleep 2 
+sleep 3 
 
 clear
 
