@@ -18,7 +18,7 @@ ejecutar script : ./wm-fedora
 2- { dnf configurado para selecionar mirrors rapidos }
 
 
-3- { herramientas de devel , fonts , librerias de C y C++ y podman }
+3- { herramientas de devel , fonts , librerias de C , C++ y podman }
 
 
 4- { tema materia dark, papirus icons, rofi, zathura, st , pcmanfm , sxiv , picom , transmission, polybar , ranger, neovim, zsh, calcurse (agenda cli),tmux, htop, nitrogen (gestion de fondo de pantalla, slock (bloqueo de pantalla) , firefox browser, telegram y blueberry (para bluetooth) }
