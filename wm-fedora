@@ -45,7 +45,7 @@ sudo dnf install -y xdg-user-dirs
 xdg-user-dirs-update --force
 
 # instalación de grupos de fedora
-sudo dnf groupinstall -y "Hardware-Support" "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management" 
+sudo dnf groupinstall -y "Administration Tools" "Hardware-Support" "Development Tools" "Multimedia" "Input Methods" "Fonts" "C Development Tools and Libraries" "Container Management" 
 
 # clonacion de repos y copiado de carpeta a su respectivos lugares 
 git clone https://github.com/darch7/bspwmbydarch_fedora 
