@@ -73,6 +73,7 @@ clear
 sudo dnf install -y slim  
 sudo systemctl enable slim  
 sudo systemctl set-default graphical.target 
+sudo cp -R bspwmbydarch_fedora/slim /usr/share/
 
 clear
 
