@@ -9,6 +9,8 @@ Bspwm by darch7 (ColorFull viene por defecto) hay 3 temas dracula y black editio
 
 ejecutar script : ./wm-fedora
 
+Notas : Si tenes un spin y queres instalarlo paralelo edita el script antes de ejecutarlo... comenta el apartado slim que es el dm puede que entre en conflicto con el dm de tu spin y no inicie o rompa tu SO y debas solucionarlo por tty. 
+
 
 **QUE TRAE EL SCRIPT...**
 
