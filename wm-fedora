@@ -77,6 +77,10 @@ sudo cp -R bspwmbydarch_fedora/slim /usr/share/
 
 clear
 
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+
 # comprobación y final
 neofetch  
 sleep 5
