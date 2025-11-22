@@ -2,8 +2,6 @@ Bspwm by darch7 (ColorFull viene por defecto) hay 3 temas dracula y black editio
 
 --------------------------------------------------------------------------------------------
 
-**Donaciones para un nuevo mate 🧉**: **https://paypal.me/darch7**
-
 --------------------------------------------------------------------------------------------
 
 
